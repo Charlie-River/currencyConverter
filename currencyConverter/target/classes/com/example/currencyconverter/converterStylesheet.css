@@ -1,0 +1,15 @@
+.toggle-button {
+    -fx-background-color: #FFA500;
+}
+
+.toggle-button:hover {
+    -fx-background-color: #808080;
+}
+
+.toggle-button:selected{
+    -fx-background-color: #808080;
+}
+
+.root {
+    -fx-background-color: #008080;
+}

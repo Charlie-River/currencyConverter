@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="500.0" maxWidth="500.0" minHeight="500.0" minWidth="0.0" prefHeight="450.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.currencyconverter.HelloController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="500.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Currency Converter">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="167.0" text="Start Currency:">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox minWidth="500.0" prefHeight="112.0" prefWidth="500.0">
+                     <children>
+                        <ToggleButton fx:id="sourceGBP" mnemonicParsing="false" onAction="#setSourceGBP" text="GBP">
+                           <HBox.margin>
+                              <Insets left="60.0" top="20.0" />
+                           </HBox.margin>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="tgSource" />
+                           </toggleGroup>
+                        </ToggleButton>
+                        <ToggleButton fx:id="sourceUSD" mnemonicParsing="false" onAction="#setSourceUSD" text="USD" toggleGroup="$tgSource">
+                           <HBox.margin>
+                              <Insets left="50.0" top="20.0" />
+                           </HBox.margin>
+                        </ToggleButton>
+                        <ToggleButton fx:id="sourceEUR" mnemonicParsing="false" onAction="#setSourceEUR" text="EUR" toggleGroup="$tgSource">
+                           <HBox.margin>
+                              <Insets left="50.0" top="20.0" />
+                           </HBox.margin>
+                        </ToggleButton>
+                        <ToggleButton fx:id="sourceJPY" mnemonicParsing="false" onAction="#setSourceJPY" text="JPY" toggleGroup="$tgSource">
+                           <HBox.margin>
+                              <Insets left="50.0" top="20.0" />
+                           </HBox.margin>
+                        </ToggleButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox prefHeight="127.0" prefWidth="500.0">
+         <children>
+            <Label text="Goal Currrency:">
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="80.0" prefWidth="200.0">
+               <children>
+                  <ToggleButton fx:id="targetGBP" mnemonicParsing="false" onAction="#setTargetGBP" text="GBP">
+                     <HBox.margin>
+                        <Insets left="60.0" top="20.0" />
+                     </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="tgTarget" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton fx:id="targetUSD" mnemonicParsing="false" onAction="#setTargetUSD" text="USD" toggleGroup="$tgTarget">
+                     <HBox.margin>
+                        <Insets left="50.0" top="20.0" />
+                     </HBox.margin>
+                  </ToggleButton>
+                  <ToggleButton fx:id="targetEUR" mnemonicParsing="false" onAction="#setTargetEUR" text="EUR" toggleGroup="$tgTarget">
+                     <HBox.margin>
+                        <Insets left="50.0" top="20.0" />
+                     </HBox.margin>
+                  </ToggleButton>
+                  <ToggleButton fx:id="targetJPY" mnemonicParsing="false" onAction="#setTargetJPY" text="JPY" toggleGroup="$tgTarget">
+                     <HBox.margin>
+                        <Insets left="50.0" top="20.0" />
+                     </HBox.margin>
+                  </ToggleButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="129.0" prefWidth="470.0">
+         <children>
+            <TextField fx:id="inputAmount" alignment="CENTER" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="Enter amount here:">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#submit" stylesheets="@converterStylesheet.css" text="Submit">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="109.0" prefWidth="470.0">
+         <children>
+            <Label fx:id="answerText" alignment="TOP_LEFT" contentDisplay="TOP" text="Label" textAlignment="CENTER" visible="false" wrapText="true">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</VBox>
